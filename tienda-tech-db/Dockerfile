@@ -1,4 +1,4 @@
-FROM mysql:8
+FROM mysql:9
 
 ENV MYSQL_ROOT_PASSWORD=admin123
 ENV MYSQL_DATABASE=tienda_tecnologica
