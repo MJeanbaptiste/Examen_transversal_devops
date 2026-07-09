@@ -1,0 +1,2 @@
+﻿NAME         IMAGE                          COMMAND                  SERVICE      CREATED          STATUS                    PORTS
+watchtower   containrrr/watchtower:latest   "/watchtower tienda-…"   watchtower   25 minutes ago   Up 25 minutes (healthy)   8080/tcp

@@ -1,0 +1,8 @@
+﻿REPOSITORY                                           TAG       IMAGE ID       CREATED AT                      SIZE
+ghcr.io/alejandroamesticaduoc/tienda-tech-db         latest    5921ab47c848   2026-05-30 09:46:01 -0400 -04   1.1GB
+ghcr.io/alejandroamesticaduoc/tienda-tech-frontend   latest    8d0535d93438   2026-05-30 09:45:44 -0400 -04   92.8MB
+ghcr.io/alejandroamesticaduoc/tienda-tech-backend    latest    24196dbf2f1e   2026-05-30 09:45:34 -0400 -04   322MB
+eva_parcial_2_devops-main-backend                    latest    b7720761d491   2026-05-30 09:18:28 -0400 -04   322MB
+eva_parcial_2_devops-main-frontend                   latest    73a42c1bbbc6   2026-05-30 09:18:07 -0400 -04   92.8MB
+eva_parcial_2_devops-main-db                         latest    cd57d26a09d2   2026-05-16 09:22:20 -0400 -04   1.1GB
+containrrr/watchtower                                latest    6dd50763bbd6   2023-11-11 15:51:37 -0300 -03   22.4MB

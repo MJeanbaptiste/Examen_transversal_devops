@@ -1,0 +1,85 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Instalar dependencias backend
+        working-directory: ./tienda-tech-backend
+        run: npm install
+      - name: Ejecutar tests unitarios
+        working-directory: ./tienda-tech-backend
+        run: npm test
+
+  publish:
+    name: Build & Push to ECR
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar credenciales AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: us-east-1
+
+      - name: Login a Amazon ECR
+        id: ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build y push de imagenes a ECR
+        env:
+          REGISTRY: ${{ steps.ecr.outputs.registry }}
+        run: |
+          docker build -t $REGISTRY/tienda-tech-backend:latest ./tienda-tech-backend
+          docker push $REGISTRY/tienda-tech-backend:latest
+          docker build -t $REGISTRY/tienda-tech-frontend:latest ./tienda-tech-frontend
+          docker push $REGISTRY/tienda-tech-frontend:latest
+          docker build -t $REGISTRY/tienda-tech-db:latest ./tienda-tech-db
+          docker push $REGISTRY/tienda-tech-db:latest
+          echo "Imagenes publicadas en ECR: $REGISTRY"
+
+  deploy:
+    name: Deploy to EKS
+    runs-on: ubuntu-latest
+    needs: publish
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Configurar credenciales AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: us-east-1
+
+      - name: Detectar cluster EKS y configurar kubeconfig
+        run: |
+          CLUSTER=$(aws eks list-clusters --region us-east-1 --query 'clusters[0]' --output text)
+          echo "Cluster EKS detectado: $CLUSTER"
+          aws eks update-kubeconfig --name "$CLUSTER" --region us-east-1
+
+      - name: Redepliegue automatico en EKS (namespace tienda)
+        run: |
+          DEPLOYS=$(kubectl get deploy -n tienda -o name)
+          echo "Deployments a actualizar: $DEPLOYS"
+          kubectl rollout restart $DEPLOYS -n tienda
+          for d in $DEPLOYS; do
+            kubectl rollout status $d -n tienda --timeout=180s
+          done
+          echo "Despliegue en EKS actualizado con la ultima imagen de ECR"

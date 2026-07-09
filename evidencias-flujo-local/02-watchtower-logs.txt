@@ -1,0 +1,332 @@
+﻿docker : time="2026-05-30T13:26:02Z" level=info msg="Watchtower 1.7.1"
+En línea: 1 Carácter: 70
++ ... ops_push\evidencias-flujo-local"; docker logs watchtower 2>&1 | Out-F ...
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (time="2026-05-3...tchtower 1.7.1":String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+time="2026-05-30T13:26:02Z" level=info msg="Using no notifications"
+time="2026-05-30T13:26:02Z" level=info msg="Only checking containers which name matches \"tienda-tech-frontend\" or 
+\"tienda-tech-backend\" or \"tienda-tech-db\""
+time="2026-05-30T13:26:02Z" level=info msg="Scheduling first run: 2026-05-30 13:26:32 +0000 UTC"
+time="2026-05-30T13:26:02Z" level=info msg="Note that the first check will be performed in 29 seconds"
+time="2026-05-30T13:26:33Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:26:33Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:26:34Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:26:34Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:26:34Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:26:35Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:26:36Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:26:36Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:26:36Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:26:36Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:27:03Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:27:03Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:27:03Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:27:04Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:27:04Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:27:05Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:27:05Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:27:05Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:27:06Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:27:06Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:27:33Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:27:33Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:27:33Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:27:34Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:27:34Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:27:35Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:27:35Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:27:35Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:27:36Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:27:36Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:28:03Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:28:03Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:28:03Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:28:04Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:28:04Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:28:05Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:28:05Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:28:05Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:28:06Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:28:06Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:28:33Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:28:33Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:28:33Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:28:34Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:28:34Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:28:34Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:28:35Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:28:35Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:28:35Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:28:35Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:29:03Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:29:03Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:29:03Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:29:03Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:29:03Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:29:02Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:29:03Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:29:03Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:29:04Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:29:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:29:30Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:29:30Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:29:31Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:29:32Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:29:32Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:29:32Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:29:33Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:29:33Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:29:34Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:29:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:30:03Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:30:03Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:30:03Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:30:04Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:30:04Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:30:05Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:30:06Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:30:06Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:30:06Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:30:06Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:30:33Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:30:33Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:30:33Z" level=info msg="Unable to update container \"/tienda-tech-frontend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:30:34Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest\", falling back to regular pull." 
+container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:30:34Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-backend image="ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest"
+time="2026-05-30T13:30:35Z" level=info msg="Unable to update container \"/tienda-tech-backend\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:30:35Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:30:35Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:30:36Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:30:36Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:31:03Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest\", falling back to regular pull." 
+container=/tienda-tech-frontend image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:31:03Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-frontend 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest"
+time="2026-05-30T13:31:05Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest image 
+(cec716289587)"
+time="2026-05-30T13:31:13Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest image 
+(51c8741881f1)"
+time="2026-05-30T13:31:14Z" level=warning msg="Could not do a head request for 
+\"ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest\", falling back to regular pull." container=/tienda-tech-db 
+image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:31:14Z" level=warning msg="Reason: registry responded to head request with \"403 Forbidden\", 
+auth: \"not present\"" container=/tienda-tech-db image="ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest"
+time="2026-05-30T13:31:15Z" level=info msg="Unable to update container \"/tienda-tech-db\": Error response from 
+daemon: error from registry: denied\ndenied. Proceeding to next."
+time="2026-05-30T13:31:15Z" level=info msg="Stopping /tienda-tech-backend (8760d4114034) with SIGTERM"
+time="2026-05-30T13:31:17Z" level=info msg="Stopping /tienda-tech-frontend (8835083efc74) with SIGTERM"
+time="2026-05-30T13:31:32Z" level=info msg="Creating /tienda-tech-frontend"
+time="2026-05-30T13:31:32Z" level=info msg="Creating /tienda-tech-backend"
+time="2026-05-30T13:31:33Z" level=info msg="Removing image 3899524a3fa3"
+time="2026-05-30T13:31:33Z" level=info msg="Removing image 2aeb74b2e712"
+time="2026-05-30T13:31:33Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=2 notify=no
+time="2026-05-30T13:32:06Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest image 
+(1b247d33afee)"
+time="2026-05-30T13:32:06Z" level=info msg="Stopping /tienda-tech-db (0ddf84b63a3f) with SIGTERM"
+time="2026-05-30T13:32:11Z" level=info msg="Creating /tienda-tech-db"
+time="2026-05-30T13:32:11Z" level=info msg="Removing image 75f300dff820"
+time="2026-05-30T13:32:11Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=1 notify=no
+time="2026-05-30T13:32:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:33:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:33:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:34:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:34:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:35:08Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest image 
+(f7378195d484)"
+time="2026-05-30T13:35:11Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest image 
+(0112f7f138ad)"
+time="2026-05-30T13:35:11Z" level=info msg="Stopping /tienda-tech-frontend (db8926563444) with SIGTERM"
+time="2026-05-30T13:35:23Z" level=info msg="Stopping /tienda-tech-backend (587a8b87a6c1) with SIGTERM"
+time="2026-05-30T13:35:24Z" level=info msg="Creating /tienda-tech-backend"
+time="2026-05-30T13:35:24Z" level=info msg="Creating /tienda-tech-frontend"
+time="2026-05-30T13:35:25Z" level=info msg="Removing image 51c8741881f1"
+time="2026-05-30T13:35:25Z" level=info msg="Removing image cec716289587"
+time="2026-05-30T13:35:25Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=2 notify=no
+time="2026-05-30T13:35:34Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest image 
+(b4a0bd3adcac)"
+time="2026-05-30T13:35:34Z" level=info msg="Stopping /tienda-tech-db (c6c76ec27307) with SIGTERM"
+time="2026-05-30T13:35:39Z" level=info msg="Creating /tienda-tech-db"
+time="2026-05-30T13:35:39Z" level=info msg="Removing image 1b247d33afee"
+time="2026-05-30T13:35:39Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=1 notify=no
+time="2026-05-30T13:36:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:36:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:37:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:37:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:38:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:38:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:39:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:39:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:40:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:40:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:41:04Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest image 
+(2e9c0d5c0627)"
+time="2026-05-30T13:41:11Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest image 
+(8dd7824c9323)"
+time="2026-05-30T13:41:11Z" level=info msg="Stopping /tienda-tech-backend (7bde9ff30b6f) with SIGTERM"
+time="2026-05-30T13:41:14Z" level=info msg="Stopping /tienda-tech-frontend (923b8fd70e52) with SIGTERM"
+time="2026-05-30T13:41:24Z" level=info msg="Creating /tienda-tech-frontend"
+time="2026-05-30T13:41:25Z" level=info msg="Creating /tienda-tech-backend"
+time="2026-05-30T13:41:25Z" level=info msg="Removing image 0112f7f138ad"
+time="2026-05-30T13:41:25Z" level=info msg="Removing image f7378195d484"
+time="2026-05-30T13:41:26Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=2 notify=no
+time="2026-05-30T13:41:50Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest image 
+(e93b85994951)"
+time="2026-05-30T13:41:50Z" level=info msg="Stopping /tienda-tech-db (1e31069ed48d) with SIGTERM"
+time="2026-05-30T13:41:54Z" level=info msg="Creating /tienda-tech-db"
+time="2026-05-30T13:41:55Z" level=info msg="Removing image b4a0bd3adcac"
+time="2026-05-30T13:41:55Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=1 notify=no
+time="2026-05-30T13:42:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:42:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:43:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:43:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:44:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:44:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:45:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:45:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:46:08Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-backend:latest image 
+(24196dbf2f1e)"
+time="2026-05-30T13:46:11Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-frontend:latest image 
+(8d0535d93438)"
+time="2026-05-30T13:46:11Z" level=info msg="Stopping /tienda-tech-frontend (fd627d46b357) with SIGTERM"
+time="2026-05-30T13:46:28Z" level=info msg="Stopping /tienda-tech-backend (713738bd783a) with SIGTERM"
+time="2026-05-30T13:46:29Z" level=info msg="Creating /tienda-tech-backend"
+time="2026-05-30T13:46:30Z" level=info msg="Creating /tienda-tech-frontend"
+time="2026-05-30T13:46:30Z" level=info msg="Removing image 8dd7824c9323"
+time="2026-05-30T13:46:31Z" level=info msg="Removing image 2e9c0d5c0627"
+time="2026-05-30T13:46:31Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=2 notify=no
+time="2026-05-30T13:46:35Z" level=info msg="Found new ghcr.io/alejandroamesticaduoc/tienda-tech-db:latest image 
+(5921ab47c848)"
+time="2026-05-30T13:46:35Z" level=info msg="Stopping /tienda-tech-db (cd2e32991f75) with SIGTERM"
+time="2026-05-30T13:46:39Z" level=info msg="Creating /tienda-tech-db"
+time="2026-05-30T13:46:40Z" level=info msg="Removing image e93b85994951"
+time="2026-05-30T13:46:40Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=1 notify=no
+time="2026-05-30T13:47:02Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:47:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:48:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:48:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:49:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:49:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:50:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:50:34Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no
+time="2026-05-30T13:51:04Z" level=info msg="Session done" Failed=0 Scanned=3 Updated=0 notify=no

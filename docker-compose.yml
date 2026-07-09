@@ -1,0 +1,98 @@
+services:
+  frontend:
+    image: 851725328977.dkr.ecr.us-east-1.amazonaws.com/tienda-tech-frontend
+    build: ./tienda-tech-frontend
+    container_name: tienda-tech-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: always
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  backend:
+    image: 851725328977.dkr.ecr.us-east-1.amazonaws.com/tienda-tech-backend
+    build: ./tienda-tech-backend
+    container_name: tienda-tech-backend
+    environment:
+      DB_HOST: db
+      DB_USER: alumno
+      DB_PASSWORD: alumno123
+      DB_NAME: tienda_tecnologica
+      DB_PORT: 3306
+    ports:
+      - "3001:3001"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: always
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 512M
+    healthcheck:
+      test: ["CMD", "node", "-e", "const http = require('http'); http.get('http://localhost:3001/api/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1); }).on('error', () => process.exit(1));"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  db:
+    image: 851725328977.dkr.ecr.us-east-1.amazonaws.com/tienda-tech-db
+    build: ./tienda-tech-db
+    container_name: tienda-tech-db
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    restart: always
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1.00"
+          memory: 1G
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "alumno", "-palumno123"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_POLL_INTERVAL: 30
+      DOCKER_API_VERSION: "1.43"
+    command: tienda-tech-frontend tienda-tech-backend tienda-tech-db
+    restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:
