@@ -55,28 +55,69 @@ docker rm tienda-tech-frontend
 docker rm tienda-tech-db
 ```
 
-## Notas
-- La base de datos se inicializa automáticamente con el script `db/init.sql` en el primer arranque.
-- Puedes modificar el frontend y backend, reconstruir y volver a levantar los contenedores.
+=========================================================
+README.txt
+Proyecto Final - Ingeniería DevOps
+=========================================================
 
+Nombre del Proyecto:
+Proyecto Final DevOps
 
-## Observabilidad y Cumplimiento (EP3)
+Descripción
+Este proyecto corresponde a la evaluación final de la asignatura Ingeniería DevOps. Su objetivo es automatizar el ciclo de vida de una aplicación utilizando herramientas y buenas prácticas DevOps, incluyendo Git, GitHub, Docker, GitHub Actions, SonarQube, Snyk y Docker Hub.
 
-Este proyecto extiende el pipeline de EP2 con observabilidad, metricas y politicas de cumplimiento automatizado.
+---------------------------------------------------------
+1. Configuración del Entorno, Manejo del Repositorio y
+   Estrategia de Branching
+---------------------------------------------------------
 
-### Monitoreo y observabilidad (IE1, IE2)
-- **AWS CloudWatch + SSM Agent** sobre la instancia EC2: metricas de CPU, memoria y disco, dashboard `tienda-tech-ep3` y alarma de CPU > 70% con notificacion por correo via Amazon SNS.
-- **Kubernetes (k3s)**: los 3 microservicios (frontend, backend, base de datos) desplegados en el namespace `tienda`; observabilidad de recursos con `metrics-server` (`kubectl top pods`).
+Se implementó una estrategia de control de versiones basada en Git utilizando las siguientes ramas:
 
-### Metricas de calidad y CI/CD (IE3)
-- **SonarCloud**: cobertura de pruebas, bugs, vulnerabilidades y code smells (dashboard del proyecto en sonarcloud.io).
-- **GitHub Actions**: tiempo de despliegue visible en cada ejecucion del workflow.
+- main
+  Contiene la versión estable del proyecto.
 
-### Politicas de cumplimiento (IE5)
-- **SonarCloud** (calidad) y **Snyk** (seguridad, `--severity-threshold=high`) ejecutados en cada push y pull request.
-- **Branch protection** en `main`: se exige Pull Request y que los checks de CI, Sonar y Snyk esten en verde antes de fusionar.
-- **Dependabot** mantiene las dependencias actualizadas.
+- develop
+  Rama utilizada para integrar todas las nuevas funcionalidades antes de llegar a producción.
 
-### Detencion del pipeline ante fallos criticos (IE6)
-- Los workflows de Sonar y Snyk terminan con `exit 1` ante un fallo de calidad o una vulnerabilidad alta, deteniendo el pipeline.
-- Combinado con branch protection, un Pull Request con un problema critico queda **bloqueado** y no se puede fusionar hasta corregirlo.
+- feature/*
+  Ramas temporales destinadas al desarrollo de nuevas funcionalidades.
+
+- hotfix/*
+  Ramas utilizadas para corregir errores críticos detectados en producción.
+
+Cada cambio realizado fue registrado mediante commits descriptivos y posteriormente integrado utilizando Pull Requests, permitiendo mantener la trazabilidad del desarrollo.
+
+El repositorio se encuentra alojado en GitHub y mantiene un historial completo de cambios.
+
+---------------------------------------------------------
+2. Automatización con GitHub Actions y Docker
+---------------------------------------------------------
+
+La aplicación fue contenerizada utilizando Docker mediante un Dockerfile.
+
+Se implementó un pipeline CI/CD con GitHub Actions que realiza automáticamente las siguientes tareas:
+
+• Descarga el código fuente.
+• Construye la imagen Docker.
+• Ejecuta pruebas unitarias.
+• Si las pruebas son exitosas, publica automáticamente la imagen en Docker Hub.
+• El pipeline se ejecuta automáticamente cuando existe un push a la rama develop o un Pull Request hacia main.
+
+Esta automatización garantiza que cada cambio sea validado antes de llegar a producción.
+
+---------------------------------------------------------
+Herramientas Utilizadas
+---------------------------------------------------------
+
+- Visual Studio Code
+- Git
+- GitHub
+- Docker
+- Docker Hub
+- GitHub Actions
+- Python
+- Pytest
+
+=========================================================
+Fin del documento
+=========================================================
